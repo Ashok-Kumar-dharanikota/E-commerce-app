@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import arrow from '../assets/icon-arrow.svg'
 
 const HeroCard = ({ hero }) => {
