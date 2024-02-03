@@ -1,7 +1,13 @@
-/* eslint-disable react/prop-types */
 import arrow from '../assets/icon-arrow.svg'
+import PropTypes from 'prop-types';
 
 const CategoryCard = ({ category }) => {
+
+    CategoryCard.propTypes = {
+        category: PropTypes.any.isRequired,
+      };
+      
+
     return (
         <div className={` ${category.style} min-w-32 min-h-32 bg-gray-100 rounded-3xl p-10 flex flex-col justify-end gap-2`} >
             <h1 className=' text-2xl font-medium'>Category</h1>

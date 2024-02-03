@@ -117,26 +117,6 @@ export default function Home() {
       </section>
 
 
-      {/* <section className=" w-full h-screen p-20 flex flex-col gap-5 pt-80">
-
-        <div className=" flex justify-between">
-          <h1 className=" text-2xl">Featured Products</h1>
-          <p className="flex items-center gap-3">Browse all products <img className=" mt-1" src={arrow} alt="" /></p>
-        </div>
-
-        <div className=" grid grid-cols-4 gap-5 grid-rows-2">
-
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-
-        </div>
-
-
-      </section> */}
-
       <section className=" w-full h-full p-6 md:px-24">
 
         <div className=" flex justify-between">
@@ -145,8 +125,6 @@ export default function Home() {
         </div>
 
         <div className=" grid grid-cols-2 grid-rows-3 gap-5 pt-5 md:grid-cols-4 md:grid-rows-2">
-
-          {/* <div className=' flex flex-col gap-3 col-start-1 col-end-3 md:row-start-1 md:row-span-3 md:col-start-1 md:col-end-3'> */}
 
           <div className=' flex flex-col col-start-1 col-end-3 gap-3 md:col-start-1 md:col-end-3 md:row-start-1 md:row-end-3 '>
 
