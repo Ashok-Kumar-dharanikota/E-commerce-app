@@ -13,27 +13,6 @@ const NavBar = () => {
     }
 
     return (
-        // <nav className=' w-screen h-20 flex justify-between items-center ml-10 mr-10 bg-black'>
-        //     <Link to={"/"} className=' text-black uppercase font-bold text-xl'>Logo</Link>
-        //     <div className=' flex items-center gap-8'>
-
-        //         <ul className=' flex gap-5 text-gray-400 font-medium sm:block' >
-        //             <li><Link to={"/store"}>Store</Link></li>
-        //             <li><Link to={"/about"}>About</Link></li>
-        //             <li><Link to={"/support"}>Support</Link></li>
-        //             <li><Link to={"/contact"}>Contact</Link></li>
-        //         </ul>
-        //         <div className=' border-solid border-2 w-60 h-10 border-gray-300 rounded-full flex items-center pl-4 justify-between'>
-        //             <input type="text" placeholder='Search' className=' w-40 h-fit outline-none' />
-        //             <div className=' border-solid border-gray-300 border-l-2 h-full rounded-r-full w-10 flex items-center justify-center bg-gray-100'>
-        //                 <img src={searchIcon} width={16} height={16} alt="" />
-        //             </div>
-        //         </div>
-        //         <img src={menuIcon} width={16} height={16} alt="" />
-
-        //     </div>
-
-        // </nav>
         <nav className=' h-20 flex justify-between items-center ml-5 mr-5'>
 
             <Link to={"/"} className=' text-black uppercase font-bold text-xl'>Logo</Link>
@@ -59,4 +38,4 @@ const NavBar = () => {
     )
 }
 
-export default NavBar
+export default NavBar;

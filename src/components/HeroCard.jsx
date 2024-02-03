@@ -3,10 +3,6 @@ import PropTypes from 'prop-types';
 
 const HeroCard = ({ hero }) => {
 
-  HeroCard.propTypes = {
-    hero: PropTypes.any.isRequired,
-  };
-
   
   return (
       <div className={`${hero.style} min-w-32 min-h-32 bg-gray-200 rounded-3xl flex justify-end items-end p-4`} >
@@ -15,4 +11,9 @@ const HeroCard = ({ hero }) => {
   )
 }
 
-export default HeroCard
+HeroCard.propTypes = {
+  hero: PropTypes.any.isRequired,
+};
+
+
+export default HeroCard;
