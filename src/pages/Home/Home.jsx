@@ -3,87 +3,56 @@ import HeroCard from "../../components/HeroCard";
 import arrow from '../../assets/icon-arrow.svg'
 import ProductCard from "../../components/ProductCard";
 import ServiceCard from "../../components/ServiceCard";
+import { useContext } from "react";
+import { homeContext } from "../../context/HomeContext";
+
+import iconShipping from '../../assets/icon-shipping.svg';
+import iconPayment from '../../assets/icon-payment.svg';
+import iconReturn from '../../assets/icon-return.svg';
 
 export default function Home() {
 
-  const HeroItems = [
-    {
-      image: "1",
-      style: " w-52 h-72"
-    },
-    {
-      image: "2",
-      style: " w-52 h-52"
-    },
-    {
-      image: "3",
-      style: " w-52 h-60"
-    },
-    {
-      image: "4",
-      style: " w-52 h-80 -mt-20"
-    }
+  const { hero, category, adverticement, bestsellers, featuredProducts, services } = useContext(homeContext);
 
-  ]
-
-  const CategoryItems = [
-    {
-      image: "1",
-      style: "col-start-1 col-end-4 md:col-start-1 md:col-end-3"
-    },
-    {
-      image: "2",
-      style: "col-start-1 col-end-4 md:col-start-3 md:col-end-4"
-    },
-    {
-      image: "3",
-      style: "col-start-1 col-end-4 md:col-start-1 md:col-end-2"
-    },
-    {
-      image: "4",
-      style: "col-start-1 col-end-4 md:col-start-2 md:col-end-4"
-    },
-  ]
 
   return (
     <>
 
 
-      <section className=" flex flex-col-reverse w-screen h-full items-center p-6 md:justify-between md:items-start md:flex-row md:px-24">
+      <section className=" flex flex-col-reverse w-full h-full items-center md:p-6 md:justify-between md:flex-row md:px-24 "  >
 
-        <div className=" bg-gray-100 text-center p-5 gap-5 flex flex-col md:w-1/2 md:text-start">
+        <div className=" -mt-20  text-center p-5 gap-1 md:gap-10 flex flex-col md:w-1/2 md:text-start">
 
-          <h1 className=" text-5xl font-semibold">Lorem ipsum dolor sit & products</h1>
-          <p className=" text-xl">Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque voluptatibus similique ut aspernatur fugiat nobis autem itaque debitis aut necessitatibus, delectus nisi cum repudiandae possimus asperiores quo velit mollitia culpa.</p>
+          <h1 className=" text-3xl md:text-8xl font-semibold font-quattrocento">{hero.title}</h1>
+          <p className=" text-sm font-quattrocentosans">{hero.description}</p>
           <div>
-            <button>Add to Cart</button>
-            <button>Explore</button>
+            <button className=" bg-green-400 px-16 py-4 text-white font-semibold hover:bg-green-500">Shop Now</button>
           </div>
 
         </div>
 
         <div className="grid grid-rows-2 grid-cols-2 gap-5">
-          {HeroItems.map((hero) => (
-            <HeroCard key={hero.image} hero={hero} />
+          {hero.images.map((image) => (
+            <HeroCard key={image.id} hero={image} />
           ))}
         </div>
       </section>
 
 
-      <section className=" grid gap-5 grid-cols-1 grid-rows-4 w-full h-full md:grid-cols-3 md:grid-rows-3 md:px-24 p-6">
-        {CategoryItems.map((category) => (
-          <CategoryCard key={category.image} category={category} />
+      <section className=" grid gap-5 grid-cols-1 grid-rows-4 w-full h-full md:grid-cols-3 md:grid-rows-3 md:px-24 p-6 ">
+        {category.map((category) => (
+          <CategoryCard key={category.id} category={category} />
         ))}
 
 
-        <div className="flex col-start-1 col-end-4 bg-black rounded-3xl flex-col-reverse md:flex-row md:justify-between shadow-md" >
+        <div className="flex col-start-1 col-end-4 min-h-80 bg-black rounded-3xl flex-col-reverse md:flex-row md:justify-between shadow-md"  >
           <div className=" text-white p-10 h-full flex flex-col justify-between gap-5 md:w-2/4">
-            <h1 className=" text-3xl">Finibus Bonorum et Malorum</h1>
-            <p className=" font-light">Quis nostrud exercitation ullamco laboris nis ? Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, non labore eum molestias perspiciatis reiciendis saepe atque qui debitis voluptas sit quis delectus quae repellat! Aliquid ea doloribus quaerat accusantium.</p>
+            <h1 className=" text-3xl">{adverticement[0].name}</h1>
+            <p className=" font-light">{adverticement[0].description}</p>
             <button className=" bg-white p-3 w-2/4 text-black rounded-3xl">Explore</button>
           </div>
 
-          <div className=" bg-white min-h-52 md:h-full md:w-1/4 rounded-3xl"></div>
+          <div className=" bg-white min-h-52 md:h-full md:w-2/4 rounded-3xl bg-[url('https://www.apple.com/v/apple-vision-pro/c/images/overview/hero/portrait_base__bwsgtdddcl7m_large.jpg')] bg-cover bg-no-repeat" style={{ backgroundImage: `url(${adverticement[0].bgImage})` }} ></div>
         </div>
       </section>
 
@@ -96,18 +65,26 @@ export default function Home() {
 
         <div className=" grid grid-cols-2 grid-rows-4 gap-10 md:grid-cols-4 md:grid-rows-2">
 
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
+          {bestsellers.map((item) => {
+            return (
+              <ProductCard key={item.id} product={item} />
+            );
+          })}
 
-          <div className=" bg-gray-400 rounded-3xl col-start-1 col-end-3 p-5 flex items-end justify-center">
+          <div className=" text-white rounded-3xl col-start-1 col-end-3 p-5 flex flex-col items-center justify-end bg-no-repeat bg-cover" style={{ backgroundImage: `url(${adverticement[1].bgImage})` }}>
 
-            <button className=" bg-white h-1/4 w-1/4 text-black rounded-3xl">Explore</button>
+            <h1 className=" text-3xl">{adverticement[1].name}</h1>
+            <p className=" font-light">{adverticement[1].description}</p>
+
+            <button className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Explore</button>
           </div>
 
-          <div className=" bg-gray-100 rounded-3xl col-start-1 col-end-3 md:col-start-3 md:col-end-5 flex items-end justify-center p-5">
-            <button className=" bg-black h-1/4 w-1/4 text-black rounded-3xl">Explore</button>
+          <div className=" text-white rounded-3xl col-start-1 col-end-3 md:col-start-3 md:col-end-5 flex flex-col items-center justify-end p-5" style={{ backgroundImage: `url(${adverticement[2].bgImage})` }}>
+
+            <h1 className=" text-3xl">{adverticement[1].name}</h1>
+            <p className=" font-light">{adverticement[1].description}</p>
+
+            <button className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Explore</button>
 
           </div>
 
@@ -128,22 +105,21 @@ export default function Home() {
 
           <div className=' flex flex-col col-start-1 col-end-3 gap-3 md:col-start-1 md:col-end-3 md:row-start-1 md:row-end-3 '>
 
-            <div className=' min-w-32 min-h-52 bg-gray-100 rounded-3xl p-3 h-full'>
-              <div className=' bg-white w-10 h-6 rounded-3xl'></div>
+            <div className=' min-w-32 min-h-52 bg-gray-100 rounded-3xl p-3 h-full bg-no-repeat bg-cover' style={{ backgroundImage: `url('https://img.freepik.com/premium-photo/his-confidence-is-first-thing-everyone-notices-studio-shot-handsome-young-man-posing-against-dark-background_590464-45488.jpg')` }}>
+              <div className=' bg-white w-10 h-6 rounded-3xl'>15%</div>
             </div>
 
-            <h1 className=' font-semibold'>Product1</h1>
-            <p className=' font-light'>Lorem ipsum dolor sit amet consectetur, adipisicing Lorem ipsum dolor sit amet consectetur, adipisicing</p>
-            <span className=' text-xs font-bold'>$499.99 USD</span>
+            <h1 className=' font-semibold'>Black Elegance Coat</h1>
+            <p className=' font-light'>Experience sophistication with our Black Elegance Coat. Crafted with precision, this coat combines style and comfort effortlessly.</p>
+            <span className=' text-xs font-bold'>$89.99 USD</span>
 
 
           </div>
 
-          <ProductCard />
 
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
+          {featuredProducts.map((item) => (
+            <ProductCard key={item.id} product={item} />
+          ))}
 
         </div>
 
@@ -151,17 +127,18 @@ export default function Home() {
 
       <section className=" h-full w-full p-6 md:px-24 flex flex-col gap-5">
 
-        <div className=" flex px-10 gap-5 justify-around">
-          <ServiceCard />
-          <ServiceCard />
-          <ServiceCard />
+        <div className=" flex px-10 gap-5 md:justify-around justify-between">
+          <ServiceCard service={services[0]} icon={iconShipping} />
+          <ServiceCard service={services[1]} icon={iconPayment} />
+          <ServiceCard service={services[2]} icon={iconReturn}/>
+
         </div>
 
         <div className=" bg-gray-100 min-h-24 rounded-3xl text-center p-10 flex flex-col justify-center items-center gap-5">
           <h1 className=" text-2xl font-semibold">Subscribe to our email newsletters and get 10%</h1>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, ullam </p>
 
-          <div className=" flex gap-2">
+          <div className=" flex gap-2 flex-wrap justify-center">
             <input placeholder="Email Address" type="text" className=" p-2 rounded-3xl stroke-none border-none px-5" />
             <button className=" p-2 bg-black text-white rounded-3xl px-5">Subscribe</button>
           </div>
@@ -171,7 +148,7 @@ export default function Home() {
 
       </section>
 
-      <section className=" bg-black w-full h-2/4 p-10">
+      <section className=" bg-black w-screen h-2/4 p-10">
 
         <div className=" grid grid-cols-2 grid-rows-2 md:grid-cols-4 md:grid-rows-1 gap-5">
 

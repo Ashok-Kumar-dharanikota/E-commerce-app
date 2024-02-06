@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import searchIcon from '../assets/icon-search.svg'
-import menuIcon from '../assets/icon-menu.png'
+import menuIcon from '../../public/icon-menu.png'
 import closeIcon from '../assets/icon-close.svg'
 
 const NavBar = () => {

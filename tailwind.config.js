@@ -5,7 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        quattrocento: ["Quattrocento"],
+        quattrocentosans: ["Quattrocento Sans"],
+      },
+    },
   },
   plugins: [],
 }
