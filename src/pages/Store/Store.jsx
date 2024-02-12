@@ -1,6 +1,9 @@
+import ProductCategories from "./containers/ProductCategories";
 
 export default function Store() {
   return (
-    <div>Store</div>
+    <section className=" w-screen h-full ">
+      <ProductCategories />
+    </section>
   )
 }

@@ -1,12 +1,17 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import searchIcon from '../assets/icon-search.svg'
-import menuIcon from '../../public/icon-menu.png'
+import menuIcon from '../assets/icon-menu.svg'
 import closeIcon from '../assets/icon-close.svg'
+import cartIcon from '../assets/icon-cart.svg'
+import { useSelector } from 'react-redux'
+import { allproducts } from '../data/data'
 
 const NavBar = () => {
 
     const [open, isOpen] = useState(false);
+    const productList = useSelector((state) => state.allproducts.cart);
+    console.log(productList);
 
     const handleMenuClick = () => {
         isOpen(!open)
@@ -25,11 +30,20 @@ const NavBar = () => {
                     <li><Link to={"/contact"}>Contact</Link></li>
                 </ul>
 
-                <div className=' border-solid border-2 w-60 h-10 border-gray-300 rounded-full flex items-center pl-4 mr-5 justify-between'>
-                    <input type="text" placeholder='Search' className=' w-40 h-fit outline-none' />
-                    <div className=' border-solid border-gray-300 border-l-2 h-full rounded-r-full w-10 flex items-center justify-center bg-gray-100'>
-                        <img src={searchIcon} width={16} height={16} alt="" />
+                <div className=' flex justify-center items-center mr-5 md:gap-5'>
+                    <div className=' border-solid border-2 h-10 border-gray-300 rounded-full flex items-center pl-4 mr-1 justify-between'>
+                        <input type="text" placeholder='Search' className=' w-40 h-fit outline-none' />
+                        <div className=' border-solid border-gray-300 border-l-2 h-full rounded-r-full w-10 flex items-center justify-center bg-gray-100'>
+                            <img src={searchIcon} width={16} height={16} alt="" />
+                        </div>
                     </div>
+                    <Link className='' to={'/cart'}>
+                        <div className=' flex gap-1'>
+                            <img src={cartIcon} width={24} height={24} alt="" />
+                            <h1>{productList.length == 0 ? "" : productList.length}</h1>
+                        </div>
+                    </Link>
+
                 </div>
                 <img className=' absolute right-0 mr-3 md:hidden' src={open ? closeIcon : menuIcon} onClick={handleMenuClick} width={16} height={16} alt="" />
             </div>

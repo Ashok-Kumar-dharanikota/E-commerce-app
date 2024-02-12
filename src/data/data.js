@@ -1,3 +1,5 @@
+import uuid from "react-uuid";
+
 const HomeData = {
     hero: {
         title: "Trendy Fashion Collection",
@@ -171,5 +173,169 @@ const HomeData = {
         }
     ]
 };
+
+export const allproducts = [
+    {
+        id: uuid(),
+        discount: 20,
+        name: "Siren Red Statement",
+        category: "Womens",
+        description: "Captivate attention with this siren red dress, a perfect statement piece for any occasion.",
+        image: "https://img.freepik.com/free-photo/young-woman-beautiful-red-dress_1303-17506.jpg",
+        original_price: 499.99,
+        quantity: 0
+    },
+    {
+        id: uuid(),
+        discount: 20,
+        image: "https://img.freepik.com/free-photo/fashion-portrait-young-elegant-woman_1328-2739.jpg",
+        name: "Enchanting Evening Gown",
+        category: "Womens",
+        description: "Enchant the evening with this stunning gown that radiates elegance and charm.",
+        original_price: 49.99,
+        quantity: 0
+
+    },
+    {
+        id: uuid(),
+        discount: 20,
+        image: "https://img.freepik.com/premium-photo/trendy-modesty-fashionable-outfit-ideas-muslim-women_802234-10936.jpg",
+        name: "Modest Chic",
+        category: "Womens",
+        description: "Stay chic with our modest fashion collection, blending style and modesty effortlessly.",
+        original_price: 49.99,
+        quantity: 0
+    },
+    {
+        id: uuid(),
+        discount: 20,
+        image: "https://img.freepik.com/premium-photo/woman-yellow-saree-with-red-background_866911-26.jpg",
+        name: "Radiant Yellow Saree",
+        category: "Womens",
+        description: "Radiate joy and positivity in this vibrant yellow saree, a perfect addition to your ethnic wardrobe.",
+        original_price: 49.99,
+        quantity: 0
+    },
+    {
+        id: uuid(),
+        discount: 20,
+        image: "https://img.freepik.com/free-photo/portrait-handsome-smiling-stylish-young-man-model-dressed-jeans-clothes-fashion-man-wearing-sunglasses_158538-5022.jpg",
+        name: "Effortless Denim Charm",
+        category: "mens",
+        description: "Radiate charm effortlessly with this casual denim outfit that exudes style and comfort.",
+        original_price: 49.99,
+        quantity: 0
+    },
+    {
+        id: uuid(),
+        discount: 20,
+        image: "https://img.freepik.com/free-photo/portrait-handsome-smiling-stylish-young-man-model-dressed-red-checkered-shirt-fashion-man-posing_158538-4914.jpg",
+        name: "Checkmate Checkered Shirt",
+        category: "mens",
+        description: "Make a bold statement with our checkered shirt, adding a touch of sophistication to your wardrobe.",
+        original_price: 49.99,
+        quantity: 0
+    },
+    {
+        id: uuid(),
+        discount: 20,
+        image: "https://img.freepik.com/free-photo/full-length-portrait-confident-successful-man_171337-16784.jpg",
+        name: "Confidence Unleashed",
+        category: "mens",
+        description: "Unleash your confidence with this stylish ensemble that speaks volumes about your personality.",
+        original_price: 49.99,
+        quantity: 0
+    },
+    {
+        id: uuid(),
+        discount: 20,
+        image: "https://img.freepik.com/free-photo/positive-guy-hat-sunglasses-smiling-isolated-background_197531-26959.jpg",
+        name: "Smile with Style",
+        category: "mens",
+        description: "Spread positivity with this stylish look that reflects your vibrant and cheerful personality.",
+        original_price: 49.99,
+        quantity: 0
+    },
+    {
+        id: uuid(),
+        discount: 20,
+        name: "Siren Red Statement",
+        category: "Womens",
+        description: "Captivate attention with this siren red dress, a perfect statement piece for any occasion.",
+        image: "https://img.freepik.com/free-photo/young-woman-beautiful-red-dress_1303-17506.jpg",
+        original_price: 49.99,
+        quantity: 0
+    },
+    {
+        id: uuid(),
+        discount: 20,
+        image: "https://img.freepik.com/free-photo/fashion-portrait-young-elegant-woman_1328-2739.jpg",
+        name: "Enchanting Evening Gown",
+        category: "Womens",
+        description: "Enchant the evening with this stunning gown that radiates elegance and charm.",
+        original_price: 49.99,
+        quantity: 0
+    },
+    {
+        id: uuid(),
+        discount: 20,
+        image: "https://img.freepik.com/premium-photo/trendy-modesty-fashionable-outfit-ideas-muslim-women_802234-10936.jpg",
+        name: "Modest Chic",
+        category: "Womens",
+        description: "Stay chic with our modest fashion collection, blending style and modesty effortlessly.",
+        original_price: 49.99,
+        quantity: 0
+    },
+    {
+        id: uuid(),
+        discount: 20,
+        image: "https://img.freepik.com/premium-photo/woman-yellow-saree-with-red-background_866911-26.jpg",
+        name: "Radiant Yellow Saree",
+        category: "Womens",
+        description: "Radiate joy and positivity in this vibrant yellow saree, a perfect addition to your ethnic wardrobe.",
+        original_price: 49.99,
+        quantity: 0
+    },
+    {
+        id: uuid(),
+        discount: 20,
+        image: "https://img.freepik.com/free-photo/portrait-handsome-smiling-stylish-young-man-model-dressed-jeans-clothes-fashion-man-wearing-sunglasses_158538-5022.jpg",
+        name: "Effortless Denim Charm",
+        category: "mens",
+        description: "Radiate charm effortlessly with this casual denim outfit that exudes style and comfort.",
+        original_price: 49.99,
+        quantity: 0
+    },
+    {
+        id: uuid(),
+        discount: 20,
+        image: "https://img.freepik.com/free-photo/portrait-handsome-smiling-stylish-young-man-model-dressed-red-checkered-shirt-fashion-man-posing_158538-4914.jpg",
+        name: "Checkmate Checkered Shirt",
+        category: "mens",
+        description: "Make a bold statement with our checkered shirt, adding a touch of sophistication to your wardrobe.",
+        original_price: 49.99,
+        quantity: 0
+    },
+    {
+        id: uuid(),
+        discount: 20,
+        image: "https://img.freepik.com/free-photo/full-length-portrait-confident-successful-man_171337-16784.jpg",
+        name: "Confidence Unleashed",
+        category: "mens",
+        description: "Unleash your confidence with this stylish ensemble that speaks volumes about your personality.",
+        original_price: 49.99,
+        quantity: 0
+    },
+    {
+        id: uuid(),
+        discount: 20,
+        image: "https://img.freepik.com/free-photo/positive-guy-hat-sunglasses-smiling-isolated-background_197531-26959.jpg",
+        name: "Smile with Style",
+        category: "mens",
+        description: "Spread positivity with this stylish look that reflects your vibrant and cheerful personality.",
+        original_price: 49.99,
+        quantity: 0
+    }
+]
 
 export default HomeData;

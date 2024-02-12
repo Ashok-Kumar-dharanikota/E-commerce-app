@@ -8,6 +8,8 @@ import About from './pages/About/About';
 import { homeContext } from './context/HomeContext';
 import HomeData from './data/data';
 import './App.css'
+import Product from './pages/Product/Product';
+import Cart from './pages/Cart/Cart';
 
 function App() {
 
@@ -16,12 +18,13 @@ function App() {
     <>
       <NavBar />
       <Routes>
-        <Route path="/" element={<homeContext.Provider value={HomeData}><Home /></homeContext.Provider>} />
+        <Route exact path="/" element={<homeContext.Provider value={HomeData}><Home /></homeContext.Provider>} />
         <Route path="/store" element={<Store />} />
+        <Route path="/store/:id" element={<Product />} />
         <Route path="/about" element={<About />} />
         <Route path="/support" element={<Support />} />
         <Route path="/contact" element={<Contact />} />
-
+        <Route path='/cart' element={<Cart />} />
       </Routes>
 
     </>

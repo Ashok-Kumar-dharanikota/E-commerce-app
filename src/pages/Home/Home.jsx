@@ -1,6 +1,6 @@
 import CategoryCard from "../../components/CategoryCard";
 import HeroCard from "../../components/HeroCard";
-import arrow from '../../assets/icon-arrow.svg'
+import Iconarrowdark from '../../assets/icon-arrow-dark.svg'
 import ProductCard from "../../components/ProductCard";
 import ServiceCard from "../../components/ServiceCard";
 import { useContext } from "react";
@@ -38,7 +38,7 @@ export default function Home() {
         </div>
       </section>
 
-
+        
       <section className=" grid gap-5 grid-cols-1 grid-rows-4 w-full h-full md:grid-cols-3 md:grid-rows-3 md:px-24 p-6 ">
         {category.map((category) => (
           <CategoryCard key={category.id} category={category} />
@@ -59,11 +59,11 @@ export default function Home() {
       <section className=" w-full h-full p-6 flex flex-col gap-5 md:px-24">
 
         <div className=" flex justify-between">
-          <h1 className=" text-2xl">Best Sellers</h1>
-          <p className="flex items-center gap-3">Browse all products <img className=" mt-1" src={arrow} alt="" /></p>
+          <h1 className=" text-2xl font-bold">Best Sellers</h1>
+          <p className="flex items-center gap-3">Browse all products <img className=" mt-1" src={Iconarrowdark} alt="" /></p>
         </div>
 
-        <div className=" grid grid-cols-2 grid-rows-4 gap-10 md:grid-cols-4 md:grid-rows-2">
+        <div className=" grid grid-cols-2 grid-rows-4 gap-5 md:grid-cols-4 md:grid-rows-2">
 
           {bestsellers.map((item) => {
             return (
@@ -97,8 +97,8 @@ export default function Home() {
       <section className=" w-full h-full p-6 md:px-24">
 
         <div className=" flex justify-between">
-          <h1 className=" text-2xl">Featured Products</h1>
-          <p className="flex items-center gap-3">Browse all products <img className=" mt-1" src={arrow} alt="" /></p>
+          <h1 className=" text-2xl font-bold">Featured Products</h1>
+          <p className="flex items-center gap-3">Browse all products <img className=" mt-1" src={Iconarrowdark} alt="" /></p>
         </div>
 
         <div className=" grid grid-cols-2 grid-rows-3 gap-5 pt-5 md:grid-cols-4 md:grid-rows-2">
