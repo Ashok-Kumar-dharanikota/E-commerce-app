@@ -8,7 +8,7 @@ const CartItem = ({ item }) => {
 
   return (
 
-    <div className=' bg-gray-100 w-2/6 h-52 rounded-3xl flex p-5 gap-5'>
+    <div className='  md:w-2/6 h-52 rounded-3xl flex p-5 gap-5 shadow-sm'>
 
       <img className=' rounded-2xl h-fit' src={item.image} width={100} alt="" />
 
@@ -22,9 +22,9 @@ const CartItem = ({ item }) => {
         </div>
 
         <div className=' flex gap-2 items-center'>
-          <button className=' rounded-full w-10 bg-white flex items-center justify-center text-center font-extrabold' onClick={() => dispatch(removeSelectedProduct(item.id))}>-</button>
+          <button className=' rounded-full w-10 bg-gray-100 flex items-center justify-center text-center font-extrabold' onClick={() => dispatch(removeSelectedProduct(item.id))}>-</button>
           <span>{item.quantity}</span>
-          <button className=' rounded-full w-10 bg-white flex items-center justify-center text-center font-extrabold' onClick={() => dispatch(addSelectedProduct(item.id))}>+</button>
+          <button className=' rounded-full w-10 bg-gray-100 flex items-center justify-center text-center font-extrabold' onClick={() => dispatch(addSelectedProduct(item.id))}>+</button>
         </div>
       </div>
 

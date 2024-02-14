@@ -38,22 +38,27 @@ export default function Home() {
         </div>
       </section>
 
-        
-      <section className=" grid gap-5 grid-cols-1 grid-rows-4 w-full h-full md:grid-cols-3 md:grid-rows-3 md:px-24 p-6 ">
-        {category.map((category) => (
-          <CategoryCard key={category.id} category={category} />
-        ))}
+
+      <section className="w-full h-full  md:px-24 p-6">
+
+        <h1 className=" text-2xl font-bold mb-5">Unlock Your Style Potential<br /><span className=" text-sm font-normal">Browse Our Collections</span></h1>
+        <div className="grid gap-5 grid-cols-1 grid-rows-4 md:grid-cols-3 md:grid-rows-3">
+          {category.map((category) => (
+            <CategoryCard key={category.id} category={category} />
+          ))}
 
 
-        <div className="flex col-start-1 col-end-4 min-h-80 bg-black rounded-3xl flex-col-reverse md:flex-row md:justify-between shadow-md"  >
-          <div className=" text-white p-10 h-full flex flex-col justify-between gap-5 md:w-2/4">
-            <h1 className=" text-3xl">{adverticement[0].name}</h1>
-            <p className=" font-light">{adverticement[0].description}</p>
-            <button className=" bg-white p-3 w-2/4 text-black rounded-3xl">Explore</button>
+          <div className="flex col-start-1 col-end-4 min-h-80 bg-gray-400 rounded-3xl flex-col-reverse md:flex-row md:justify-between shadow-md bg-no-repeat bg-contain overflow-hidden"   >
+            <div className=" text-white p-10 h-full flex flex-col gap-5 md:w-2/4">
+              <h1 className=" text-3xl font-semibold">{adverticement[0].name}</h1>
+              <p className=" font-light">{adverticement[0].description}</p>
+              <button className=" bg-white p-3 w-1/4 text-black rounded-3xl shadow-md hover:bg-black hover:text-white transition-all">Explore</button>
+            </div>
+
+            <img src={adverticement[0].bgImage} alt="" width={600} />
           </div>
-
-          <div className=" bg-white min-h-52 md:h-full md:w-2/4 rounded-3xl bg-[url('https://www.apple.com/v/apple-vision-pro/c/images/overview/hero/portrait_base__bwsgtdddcl7m_large.jpg')] bg-cover bg-no-repeat" style={{ backgroundImage: `url(${adverticement[0].bgImage})` }} ></div>
         </div>
+
       </section>
 
       <section className=" w-full h-full p-6 flex flex-col gap-5 md:px-24">
@@ -73,18 +78,23 @@ export default function Home() {
 
           <div className=" text-white rounded-3xl col-start-1 col-end-3 p-5 flex flex-col items-center justify-end bg-no-repeat bg-cover" style={{ backgroundImage: `url(${adverticement[1].bgImage})` }}>
 
-            <h1 className=" text-3xl">{adverticement[1].name}</h1>
-            <p className=" font-light">{adverticement[1].description}</p>
+            <div className=" rounded-xl bg-white/20 backdrop-blur-sm flex flex-col items-center text-center p-5 gap-4">
+              <h1 className=" text-3xl font-semibold">{adverticement[1].name}</h1>
+              <p className=" font-light">{adverticement[1].description}</p>
 
-            <button className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Explore</button>
+              <button className=" bg-white p-3 w-1/4 text-black rounded-3xl shadow-md hover:bg-black hover:text-white transition-all">Explore</button>
+            </div>
+
           </div>
 
           <div className=" text-white rounded-3xl col-start-1 col-end-3 md:col-start-3 md:col-end-5 flex flex-col items-center justify-end p-5" style={{ backgroundImage: `url(${adverticement[2].bgImage})` }}>
 
-            <h1 className=" text-3xl">{adverticement[1].name}</h1>
-            <p className=" font-light">{adverticement[1].description}</p>
+            <div className=" rounded-xl bg-white/20 backdrop-blur-sm flex flex-col items-center text-center p-5 gap-4">
+              <h1 className=" text-3xl font-semibold">{adverticement[2].name}</h1>
+              <p className=" font-light">{adverticement[2].description}</p>
 
-            <button className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">Explore</button>
+              <button className=" bg-white p-3 w-1/4 text-black rounded-3xl shadow-md hover:bg-black hover:text-white transition-all">Explore</button>
+            </div>
 
           </div>
 
@@ -130,7 +140,7 @@ export default function Home() {
         <div className=" flex px-10 gap-5 md:justify-around justify-between">
           <ServiceCard service={services[0]} icon={iconShipping} />
           <ServiceCard service={services[1]} icon={iconPayment} />
-          <ServiceCard service={services[2]} icon={iconReturn}/>
+          <ServiceCard service={services[2]} icon={iconReturn} />
 
         </div>
 

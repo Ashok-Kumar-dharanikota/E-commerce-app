@@ -65,8 +65,8 @@ const HomeData = {
         {
             id: "1",
             name: "Casual Bliss",
-            description: "Embark on a journey of casual bliss with dresses perfect for friend hangouts and travel adventures.",
-            bgImage: "https://images.pexels.com/photos/708440/pexels-photo-708440.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            description: "Embark on a journey of casual bliss with dresses perfect for friend hangouts and travel adventures, now with discounts of up to 50% off and more! Take advantage of this limited time special offer and elevate your style at unbeatable prices.",
+            bgImage: "https://img.freepik.com/free-vector/horizontal-sale-banner-template_23-2148897328.jpg?w=1060&t=st=1707819234~exp=1707819834~hmac=238e48a7c52443622cd478a9117dba93cd61da70453764c691e594f3820d4d85",
             link: "/casual-friendly"
         },
         {
@@ -183,7 +183,8 @@ export const allproducts = [
         description: "Captivate attention with this siren red dress, a perfect statement piece for any occasion.",
         image: "https://img.freepik.com/free-photo/young-woman-beautiful-red-dress_1303-17506.jpg",
         original_price: 499.99,
-        quantity: 0
+        quantity: 0,
+        rating: 4.0
     },
     {
         id: uuid(),
@@ -193,7 +194,8 @@ export const allproducts = [
         category: "Womens",
         description: "Enchant the evening with this stunning gown that radiates elegance and charm.",
         original_price: 49.99,
-        quantity: 0
+        quantity: 0,
+        rating: 4.1
 
     },
     {
@@ -204,7 +206,8 @@ export const allproducts = [
         category: "Womens",
         description: "Stay chic with our modest fashion collection, blending style and modesty effortlessly.",
         original_price: 49.99,
-        quantity: 0
+        quantity: 0,
+        rating: 5.0
     },
     {
         id: uuid(),
@@ -214,7 +217,8 @@ export const allproducts = [
         category: "Womens",
         description: "Radiate joy and positivity in this vibrant yellow saree, a perfect addition to your ethnic wardrobe.",
         original_price: 49.99,
-        quantity: 0
+        quantity: 0,
+        rating: 4.9
     },
     {
         id: uuid(),
@@ -224,7 +228,8 @@ export const allproducts = [
         category: "mens",
         description: "Radiate charm effortlessly with this casual denim outfit that exudes style and comfort.",
         original_price: 49.99,
-        quantity: 0
+        quantity: 0,
+        rating: 4.3
     },
     {
         id: uuid(),
@@ -234,7 +239,8 @@ export const allproducts = [
         category: "mens",
         description: "Make a bold statement with our checkered shirt, adding a touch of sophistication to your wardrobe.",
         original_price: 49.99,
-        quantity: 0
+        quantity: 0,
+        rating: 4.5
     },
     {
         id: uuid(),
@@ -244,7 +250,8 @@ export const allproducts = [
         category: "mens",
         description: "Unleash your confidence with this stylish ensemble that speaks volumes about your personality.",
         original_price: 49.99,
-        quantity: 0
+        quantity: 0,
+        rating: 4.8
     },
     {
         id: uuid(),
@@ -254,7 +261,8 @@ export const allproducts = [
         category: "mens",
         description: "Spread positivity with this stylish look that reflects your vibrant and cheerful personality.",
         original_price: 49.99,
-        quantity: 0
+        quantity: 0,
+        rating: 5.0
     },
     {
         id: uuid(),
@@ -263,8 +271,9 @@ export const allproducts = [
         category: "Womens",
         description: "Captivate attention with this siren red dress, a perfect statement piece for any occasion.",
         image: "https://img.freepik.com/free-photo/young-woman-beautiful-red-dress_1303-17506.jpg",
-        original_price: 49.99,
-        quantity: 0
+        original_price: 499.99,
+        quantity: 0,
+        rating: 4.0
     },
     {
         id: uuid(),
@@ -274,7 +283,9 @@ export const allproducts = [
         category: "Womens",
         description: "Enchant the evening with this stunning gown that radiates elegance and charm.",
         original_price: 49.99,
-        quantity: 0
+        quantity: 0,
+        rating: 4.1
+
     },
     {
         id: uuid(),
@@ -284,7 +295,8 @@ export const allproducts = [
         category: "Womens",
         description: "Stay chic with our modest fashion collection, blending style and modesty effortlessly.",
         original_price: 49.99,
-        quantity: 0
+        quantity: 0,
+        rating: 5.0
     },
     {
         id: uuid(),
@@ -294,7 +306,8 @@ export const allproducts = [
         category: "Womens",
         description: "Radiate joy and positivity in this vibrant yellow saree, a perfect addition to your ethnic wardrobe.",
         original_price: 49.99,
-        quantity: 0
+        quantity: 0,
+        rating: 4.9
     },
     {
         id: uuid(),
@@ -304,7 +317,8 @@ export const allproducts = [
         category: "mens",
         description: "Radiate charm effortlessly with this casual denim outfit that exudes style and comfort.",
         original_price: 49.99,
-        quantity: 0
+        quantity: 0,
+        rating: 4.3
     },
     {
         id: uuid(),
@@ -314,7 +328,8 @@ export const allproducts = [
         category: "mens",
         description: "Make a bold statement with our checkered shirt, adding a touch of sophistication to your wardrobe.",
         original_price: 49.99,
-        quantity: 0
+        quantity: 0,
+        rating: 4.5
     },
     {
         id: uuid(),
@@ -324,7 +339,8 @@ export const allproducts = [
         category: "mens",
         description: "Unleash your confidence with this stylish ensemble that speaks volumes about your personality.",
         original_price: 49.99,
-        quantity: 0
+        quantity: 0,
+        rating: 4.8
     },
     {
         id: uuid(),
@@ -334,7 +350,8 @@ export const allproducts = [
         category: "mens",
         description: "Spread positivity with this stylish look that reflects your vibrant and cheerful personality.",
         original_price: 49.99,
-        quantity: 0
+        quantity: 0,
+        rating: 5.0
     }
 ]
 

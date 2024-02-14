@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
+import { useEffect, useState } from "react";
 import Product from "./Product";
 import { allproducts } from "../../../data/data";
 import { Link } from "react-router-dom";
-
+import IconFilter from '../../../assets/icon-filter.svg'
 const fashionProductCategories = ["mens", "Womens"];
 
 const Products = () => {
@@ -12,6 +11,8 @@ const Products = () => {
     const [category, setCategoryList] = useState([]);
     const [maxPrice, setMaxPrice] = useState(1000);
     const [sort, setSort] = useState(null);
+
+    const [filter, setFilter] = useState(false);
 
     const handleChanges = (e) => {
         console.log("The value of e is: ", e.target.value);
@@ -52,8 +53,9 @@ const Products = () => {
 
 
     return (
-        <div className="flex justify-around h-screen">
-            <div className="shadow-md w-fit h-screen p-10 hidden md:flex flex-col sticky">
+        <div className="flex justify-around w-screen h-screen">
+            <img className=" absolute right-0 mr-5 z-20  md:hidden" src={IconFilter} onClick={() => setFilter(!filter)} width={24} alt="" />
+            <div className={`shadow-md bg-white absolute z-10 right-0 md:w-fit h-fit md:h-screen p-10 ${ filter ? 'invisible' : 'visible'} md:visible flex-col md:sticky`} >
                 <div className="mb-10">
                     <h2 className="font-semibold mb-4">Product Categories</h2>
                     {fashionProductCategories.map((category, index) => (
@@ -106,8 +108,8 @@ const Products = () => {
                     </div>
                 </div>
             </div>
-            <div className="w-full px-10 overflow-scroll overflow-x-hidden">
-                <div className="bg-white w-full grid grid-cols-4 gap-8 flex-wrap mt-10">
+            <div className="w-full px-10 mt-10 overflow-scroll overflow-x-hidden">
+                <div className="bg-white w-full grid grid-cols-2 md:grid-cols-4 gap-8 flex-wrap md:mt-10 gap-y-20">
                     {products.map((product) => (
                         <Link key={product.id} to={`/store/${product.id}`}>
                             <Product key={product.id} product={product} />
