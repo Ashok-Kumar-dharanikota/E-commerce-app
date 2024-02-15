@@ -177,37 +177,36 @@ const HomeData = {
 export const allproducts = [
     {
         id: uuid(),
-        discount: 20,
+        discount: 18,
         name: "Siren Red Statement",
         category: "Womens",
         description: "Captivate attention with this siren red dress, a perfect statement piece for any occasion.",
         image: "https://img.freepik.com/free-photo/young-woman-beautiful-red-dress_1303-17506.jpg",
-        original_price: 499.99,
+        original_price: 59.99,
         quantity: 0,
-        rating: 4.0
+        rating: 4.2
     },
     {
         id: uuid(),
-        discount: 20,
+        discount: 22,
         image: "https://img.freepik.com/free-photo/fashion-portrait-young-elegant-woman_1328-2739.jpg",
         name: "Enchanting Evening Gown",
         category: "Womens",
         description: "Enchant the evening with this stunning gown that radiates elegance and charm.",
-        original_price: 49.99,
+        original_price: 79.99,
         quantity: 0,
-        rating: 4.1
-
+        rating: 4.3
     },
     {
         id: uuid(),
-        discount: 20,
+        discount: 15,
         image: "https://img.freepik.com/premium-photo/trendy-modesty-fashionable-outfit-ideas-muslim-women_802234-10936.jpg",
         name: "Modest Chic",
         category: "Womens",
         description: "Stay chic with our modest fashion collection, blending style and modesty effortlessly.",
-        original_price: 49.99,
+        original_price: 69.99,
         quantity: 0,
-        rating: 5.0
+        rating: 4.7
     },
     {
         id: uuid(),
@@ -216,42 +215,42 @@ export const allproducts = [
         name: "Radiant Yellow Saree",
         category: "Womens",
         description: "Radiate joy and positivity in this vibrant yellow saree, a perfect addition to your ethnic wardrobe.",
-        original_price: 49.99,
+        original_price: 89.99,
         quantity: 0,
-        rating: 4.9
+        rating: 4.6
     },
     {
         id: uuid(),
-        discount: 20,
+        discount: 25,
         image: "https://img.freepik.com/free-photo/portrait-handsome-smiling-stylish-young-man-model-dressed-jeans-clothes-fashion-man-wearing-sunglasses_158538-5022.jpg",
         name: "Effortless Denim Charm",
         category: "mens",
         description: "Radiate charm effortlessly with this casual denim outfit that exudes style and comfort.",
-        original_price: 49.99,
+        original_price: 59.99,
         quantity: 0,
-        rating: 4.3
+        rating: 4.0
     },
     {
         id: uuid(),
-        discount: 20,
+        discount: 18,
         image: "https://img.freepik.com/free-photo/portrait-handsome-smiling-stylish-young-man-model-dressed-red-checkered-shirt-fashion-man-posing_158538-4914.jpg",
         name: "Checkmate Checkered Shirt",
         category: "mens",
         description: "Make a bold statement with our checkered shirt, adding a touch of sophistication to your wardrobe.",
-        original_price: 49.99,
+        original_price: 69.99,
         quantity: 0,
-        rating: 4.5
+        rating: 4.8
     },
     {
         id: uuid(),
-        discount: 20,
+        discount: 22,
         image: "https://img.freepik.com/free-photo/full-length-portrait-confident-successful-man_171337-16784.jpg",
         name: "Confidence Unleashed",
         category: "mens",
         description: "Unleash your confidence with this stylish ensemble that speaks volumes about your personality.",
-        original_price: 49.99,
+        original_price: 79.99,
         quantity: 0,
-        rating: 4.8
+        rating: 4.4
     },
     {
         id: uuid(),
@@ -262,97 +261,285 @@ export const allproducts = [
         description: "Spread positivity with this stylish look that reflects your vibrant and cheerful personality.",
         original_price: 49.99,
         quantity: 0,
-        rating: 5.0
-    },
-    {
-        id: uuid(),
-        discount: 20,
-        name: "Siren Red Statement",
-        category: "Womens",
-        description: "Captivate attention with this siren red dress, a perfect statement piece for any occasion.",
-        image: "https://img.freepik.com/free-photo/young-woman-beautiful-red-dress_1303-17506.jpg",
-        original_price: 499.99,
-        quantity: 0,
-        rating: 4.0
-    },
-    {
-        id: uuid(),
-        discount: 20,
-        image: "https://img.freepik.com/free-photo/fashion-portrait-young-elegant-woman_1328-2739.jpg",
-        name: "Enchanting Evening Gown",
-        category: "Womens",
-        description: "Enchant the evening with this stunning gown that radiates elegance and charm.",
-        original_price: 49.99,
-        quantity: 0,
-        rating: 4.1
-
-    },
-    {
-        id: uuid(),
-        discount: 20,
-        image: "https://img.freepik.com/premium-photo/trendy-modesty-fashionable-outfit-ideas-muslim-women_802234-10936.jpg",
-        name: "Modest Chic",
-        category: "Womens",
-        description: "Stay chic with our modest fashion collection, blending style and modesty effortlessly.",
-        original_price: 49.99,
-        quantity: 0,
-        rating: 5.0
-    },
-    {
-        id: uuid(),
-        discount: 20,
-        image: "https://img.freepik.com/premium-photo/woman-yellow-saree-with-red-background_866911-26.jpg",
-        name: "Radiant Yellow Saree",
-        category: "Womens",
-        description: "Radiate joy and positivity in this vibrant yellow saree, a perfect addition to your ethnic wardrobe.",
-        original_price: 49.99,
-        quantity: 0,
         rating: 4.9
     },
     {
         id: uuid(),
-        discount: 20,
-        image: "https://img.freepik.com/free-photo/portrait-handsome-smiling-stylish-young-man-model-dressed-jeans-clothes-fashion-man-wearing-sunglasses_158538-5022.jpg",
-        name: "Effortless Denim Charm",
+        discount: 25,
+        name: "Graphic Tee Design",
         category: "mens",
-        description: "Radiate charm effortlessly with this casual denim outfit that exudes style and comfort.",
+        description: "Stand out in this trendy graphic t-shirt design, a perfect choice for a casual day out.",
+        image: "https://img.freepik.com/free-photo/graphic-tshirt-trendy-design-mockup-presented-wooden-hanger_460848-13975.jpg?size=626&ext=jpg",
+        original_price: 29.99,
+        quantity: 0,
+        rating: 4.2
+    },
+    {
+        id: uuid(),
+        discount: 30,
+        name: "Bicolor Ensemble",
+        category: "Womens",
+        description: "Make a bold statement with this chic bicolor outfit, perfect for a day out in the city.",
+        image: "https://img.freepik.com/premium-photo/woman-gray-pants-blouse-bicolor-accessories-boots-white-background-brown-hair-studio-shot_481253-1215.jpg",
+        original_price: 119.99,
+        quantity: 0,
+        rating: 4.7
+    },
+    {
+        id: uuid(),
+        discount: 20,
+        name: "Classic Black Tee",
+        category: "mens",
+        description: "Elevate your wardrobe with this simple yet stylish black tee, a versatile piece for any occasion.",
+        image: "https://img.freepik.com/free-psd/simple-black-men-s-tee-mockup_53876-57893.jpg",
+        original_price: 39.99,
+        quantity: 0,
+        rating: 4.3
+    },
+    {
+        id: uuid(),
+        discount: 15,
+        name: "Red Hoodie Friendship",
+        category: "mens",
+        description: "Show your bond with your bestie with these matching red hoodies, perfect for fun outings together.",
+        image: "https://img.freepik.com/free-photo/bff-printed-red-hoodie_53876-105408.jpg",
         original_price: 49.99,
+        quantity: 0,
+        rating: 4.6
+    },
+    {
+        id: uuid(),
+        discount: 15,
+        name: "Red Polo Style",
+        category: "mens",
+        description: "Stay stylish and comfortable in this vibrant red polo shirt, perfect for casual gatherings and outings.",
+        image: "https://img.freepik.com/free-photo/man-red-polo-shirt-apparel-studio-shoot_53876-102825.jpg",
+        original_price: 54.99,
+        quantity: 0,
+        rating: 4.4
+    },
+    {
+        id: uuid(),
+        discount: 20,
+        name: "Red & White Polo Duo",
+        category: "mens",
+        description: "Upgrade your wardrobe with this stylish duo of red and white polo shirts, perfect for a casual yet refined look.",
+        image: "https://img.freepik.com/premium-psd/red-white-polo-shirts-hangers_23-2149688331.jpg",
+        original_price: 89.99,
+        quantity: 0,
+        rating: 4.7
+    },
+    {
+        id: uuid(),
+        discount: 10,
+        name: "Hoodie Portrait",
+        category: "Womens",
+        description: "Stay cozy and stylish in this hoodie, perfect for capturing your casual moments with confidence.",
+        image: "https://img.freepik.com/free-photo/portrait-young-adult-wearing-hoodie-mockup_23-2149296261.jpg",
+        original_price: 79.99,
+        quantity: 0,
+        rating: 4.6
+    },
+    {
+        id: uuid(),
+        discount: 25,
+        name: "Black Sweater Style",
+        category: "mens",
+        description: "Achieve a laid-back yet fashionable look with this sleek black sweater and bucket hat combination.",
+        image: "https://img.freepik.com/free-photo/man-black-sweater-black-bucket-hat-youth-apparel-shoot_53876-102294.jpg",
+        original_price: 79.99,
+        quantity: 0,
+        rating: 4.5
+    },
+    {
+        id: uuid(),
+        discount: 15,
+        name: "Casual Urban Style",
+        category: "mens",
+        description: "Achieve a trendy urban look with this casual outfit, perfect for everyday wear.",
+        image: "https://img.freepik.com/free-photo/young-handsome-hipster-man-standing_285396-1515.jpg",
+        original_price: 59.99,
         quantity: 0,
         rating: 4.3
     },
     {
         id: uuid(),
         discount: 20,
-        image: "https://img.freepik.com/free-photo/portrait-handsome-smiling-stylish-young-man-model-dressed-red-checkered-shirt-fashion-man-posing_158538-4914.jpg",
-        name: "Checkmate Checkered Shirt",
+        name: "Chic Studio Vibes",
         category: "mens",
-        description: "Make a bold statement with our checkered shirt, adding a touch of sophistication to your wardrobe.",
-        original_price: 49.99,
+        description: "Embrace a laid-back yet stylish vibe with this chic studio-inspired outfit.",
+        image: "https://img.freepik.com/free-photo/young-curly-man-sitting-studio-chair-isolated-white-wall_231208-1181.jpg",
+        original_price: 69.99,
         quantity: 0,
         rating: 4.5
     },
     {
         id: uuid(),
-        discount: 20,
-        image: "https://img.freepik.com/free-photo/full-length-portrait-confident-successful-man_171337-16784.jpg",
-        name: "Confidence Unleashed",
+        discount: 18,
+        name: "Serious Style Statement",
         category: "mens",
-        description: "Unleash your confidence with this stylish ensemble that speaks volumes about your personality.",
-        original_price: 49.99,
+        description: "Make a serious style statement with this bold and confident look, perfect for any occasion.",
+        image: "https://img.freepik.com/free-photo/serious-young-man-standing-isolated-grey_171337-10571.jpg?size=626&ext=jpg&ga=GA1.1.1274709441.1701714783&semt=ais",
+        original_price: 89.99,
+        quantity: 0,
+        rating: 4.8
+    },
+    {
+        id: uuid(),
+        discount: 25,
+        name: "Stylish Portrait",
+        category: "Womens",
+        description: "Capture your stylish essence with this stunning portrait that exudes confidence and charm.",
+        image: "https://img.freepik.com/free-photo/portrait-beautiful-stylish-young-woman_158538-4020.jpg?size=626&ext=jpg&ga=GA1.1.1274709441.1701714783&semt=ais",
+        original_price: 99.99,
+        quantity: 0,
+        rating: 4.7
+    },
+    {
+        id: uuid(),
+        discount: 30,
+        name: "Winter Fashion Demonstration",
+        category: "Womens",
+        description: "Stay warm and stylish with this winter fashion demonstration showcasing trendy winter clothing.",
+        image: "https://img.freepik.com/free-photo/woman-model-demonstrating-winter-cloths_1303-17005.jpg?size=626&ext=jpg&ga=GA1.1.1274709441.1701714783&semt=ais",
+        original_price: 129.99,
         quantity: 0,
         rating: 4.8
     },
     {
         id: uuid(),
         discount: 20,
-        image: "https://img.freepik.com/free-photo/positive-guy-hat-sunglasses-smiling-isolated-background_197531-26959.jpg",
-        name: "Smile with Style",
-        category: "mens",
-        description: "Spread positivity with this stylish look that reflects your vibrant and cheerful personality.",
+        name: "Sunglasses and Bag Style",
+        category: "Womens",
+        description: "Accessorize with style with this ensemble featuring trendy sunglasses and a chic bag.",
+        image: "https://img.freepik.com/premium-photo/pretty-woman-sunglasses-with-bag_136403-2340.jpg?size=626&ext=jpg&ga=GA1.1.1274709441.1701714783&semt=ais",
+        original_price: 79.99,
+        quantity: 0,
+        rating: 4.6
+    },
+    {
+        id: uuid(),
+        discount: 15,
+        name: "Indian Sari Beauty",
+        category: "Womens",
+        description: "Drape yourself in elegance with this beautiful Indian sari, perfect for cultural occasions.",
+        image: "https://img.freepik.com/free-photo/young-indian-woman-wearing-sari_23-2149400840.jpg?size=626&ext=jpg&ga=GA1.1.1274709441.1701714783&semt=ais",
+        original_price: 149.99,
+        quantity: 0,
+        rating: 4.9
+    },
+    {
+        id: uuid(),
+        discount: 18,
+        name: "Purple Sweater Ensemble",
+        category: "Womens",
+        description: "Stay cozy and stylish with this chic purple sweater ensemble, perfect for casual outings.",
+        image: "https://img.freepik.com/free-photo/beautiful-woman-purple-sweater-skirt_1303-17493.jpg?size=626&ext=jpg&ga=GA1.1.1274709441.1701714783&semt=ais",
+        original_price: 69.99,
+        quantity: 0,
+        rating: 4.4
+    },
+    {
+        id: uuid(),
+        discount: 22,
+        name: "Colorful Summer Fashion",
+        category: "Womens",
+        description: "Brighten up your summer with this colorful and stylish fashion ensemble, perfect for sunny days.",
+        image: "https://img.freepik.com/free-photo/woman-posing-stylish-summer-fashion-bag-colorful-mood_285396-524.jpg?size=626&ext=jpg&ga=GA1.1.1274709441.1701714783&semt=ais",
+        original_price: 99.99,
+        quantity: 0,
+        rating: 4.7
+    },
+    {
+        id: uuid(),
+        discount: 15,
+        name: "Asian Girl Poses",
+        category: "kids",
+        description: "Capture precious moments with this adorable Asian girl posing for the camera.",
+        image: "https://img.freepik.com/free-photo/asian-girl-posing_23-2149396537.jpg?size=626&ext=jpg&ga=GA1.1.1274709441.1701714783&semt=ais",
+        original_price: 39.99,
+        quantity: 0,
+        rating: 4.3
+    },
+    {
+        id: uuid(),
+        discount: 20,
+        name: "Cute Little Girl Portrait",
+        category: "kids",
+        description: "Admire the innocence in this full-length portrait of a cute little girl wearing a hat.",
+        image: "https://img.freepik.com/free-photo/full-length-portrait-cute-little-girl-hat_171337-13768.jpg?size=626&ext=jpg&ga=GA1.1.1274709441.1701714783&semt=ais",
         original_price: 49.99,
         quantity: 0,
-        rating: 5.0
+        rating: 4.5
+    },
+    {
+        id: uuid(),
+        discount: 25,
+        name: "Stylish Kid Boy",
+        category: "kids",
+        description: "Celebrate childhood with this stylish full-length portrait of a little boy in trendy jeans clothes.",
+        image: "https://img.freepik.com/free-photo/full-length-portrait-cute-little-kid-boy-stylish-jeans-clothes-smiling-standing-white-kids-fashion-concept_155003-20308.jpg?size=626&ext=jpg&ga=GA1.1.1274709441.1701714783&semt=ais",
+        original_price: 59.99,
+        quantity: 0,
+        rating: 4.7
+    },
+    {
+        id: uuid(),
+        discount: 18,
+        name: "Little Boy Poses",
+        category: "kids",
+        description: "Capture the joy of childhood with this low-angle portrait of a little boy posing for the camera.",
+        image: "https://img.freepik.com/free-photo/low-angle-little-boy-posing_23-2148445671.jpg?size=626&ext=jpg&ga=GA1.1.1274709441.1701714783&semt=ais",
+        original_price: 44.99,
+        quantity: 0,
+        rating: 4.2
+    },
+    {
+        id: uuid(),
+        discount: 20,
+        name: "Close-Up Child Portrait",
+        category: "kids",
+        description: "Capture the innocence and charm in this close-up portrait of an adorable child.",
+        image: "https://img.freepik.com/free-photo/close-up-cute-child-portrait_23-2149153275.jpg?size=626&ext=jpg&ga=GA1.1.1274709441.1701714783&semt=ais",
+        original_price: 34.99,
+        quantity: 0,
+        rating: 4.6
+    },
+    {
+        id: uuid(),
+        discount: 15,
+        name: "Young Boy Casual Style",
+        category: "kids",
+        description: "Admire the casual charm in this portrait of a pretty young boy in casual clothes.",
+        image: "https://img.freepik.com/free-photo/pretty-young-boy-casual-clothes-white-studio_155003-32750.jpg?size=626&ext=jpg&ga=GA1.1.1274709441.1701714783&semt=ais",
+        original_price: 39.99,
+        quantity: 0,
+        rating: 4.4
+    },
+    {
+        id: uuid(),
+        discount: 22,
+        name: "Skateboarding Girl Portrait",
+        category: "kids",
+        description: "Embrace the spirit of adventure with this portrait of a young girl with a skateboard.",
+        image: "https://img.freepik.com/free-photo/portrait-young-girl-with-skateboard_23-2149185137.jpg?size=626&ext=jpg&ga=GA1.1.1274709441.1701714783&semt=ais",
+        original_price: 54.99,
+        quantity: 0,
+        rating: 4.8
+    },
+    {
+        id: uuid(),
+        discount: 28,
+        name: "Child with Skateboard",
+        category: "kids",
+        description: "Witness the joy of childhood with this portrait of a cute child with a skateboard.",
+        image: "https://img.freepik.com/free-photo/front-view-cute-child-boy-white-t-shirt-yellow-jeans-holding-green-skateboard-blue-floor_179666-1008.jpg?size=626&ext=jpg&ga=GA1.1.1274709441.1701714783&semt=ais",
+        original_price: 49.99,
+        quantity: 0,
+        rating: 4.7
     }
+
+
 ]
 
 export default HomeData;
