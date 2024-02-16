@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import Product from "./Product";
+import Product from "../../../containers/Product";
 import { allproducts } from "../../../data/data";
 import { Link } from "react-router-dom";
 import IconFilter from '../../../assets/icon-filter.svg'
-const fashionProductCategories = ["mens", "Womens"];
+
+const fashionProductCategories = ["mens", "Womens", "kids"];
 
 const Products = () => {
 
@@ -108,8 +109,8 @@ const Products = () => {
                     </div>
                 </div>
             </div>
-            <div className="w-full px-10 mt-10 overflow-scroll overflow-x-hidden">
-                <div className="bg-white w-full grid grid-cols-2 md:grid-cols-4 gap-8 flex-wrap md:mt-10 gap-y-20">
+            <div className="w-full p-5 md:px-10 mt-10 overflow-scroll overflow-x-hidden">
+                <div className="bg-white w-full grid grid-cols-2 md:grid-cols-4 gap-5 flex-wrap md:mt-10 gap-y-20">
                     {products.map((product) => (
                         <Link key={product.id} to={`/store/${product.id}`}>
                             <Product key={product.id} product={product} />

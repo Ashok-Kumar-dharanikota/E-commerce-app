@@ -221,15 +221,26 @@ export const allproducts = [
     },
     {
         id: uuid(),
-        discount: 25,
-        image: "https://img.freepik.com/free-photo/portrait-handsome-smiling-stylish-young-man-model-dressed-jeans-clothes-fashion-man-wearing-sunglasses_158538-5022.jpg",
+        discount: 10,
+        name: "Black Elegance Coat",
+        category: "mens",
+        description: "Experience sophistication with our Black Elegance Coat. Crafted with precision, this coat combines style and comfort effortlessly.",
+        image: "https://img.freepik.com/premium-photo/his-confidence-is-first-thing-everyone-notices-studio-shot-handsome-young-man-posing-against-dark-background_590464-45488.jpg",
+        original_price: 129,
+        quantity: 0,
+        rating: 4.9
+    },
+    {
+        id: uuid(),
+        discount: 10,
         name: "Effortless Denim Charm",
         category: "mens",
         description: "Radiate charm effortlessly with this casual denim outfit that exudes style and comfort.",
-        original_price: 59.99,
+        image: "https://img.freepik.com/free-photo/portrait-handsome-smiling-stylish-young-man-model-dressed-jeans-clothes-fashion-man-wearing-sunglasses_158538-5022.jpg",
+        original_price: 34.99,
         quantity: 0,
-        rating: 4.0
-    },
+        rating: 4.3
+    },    
     {
         id: uuid(),
         discount: 18,

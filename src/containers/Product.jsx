@@ -19,7 +19,7 @@ const Product = ({ product }) => {
             <div className=' flex justify-between items-center md:flex-row-reverse  flex-wrap'>
                 <div className=' flex items-center gap-1'>
                     <p className=' font-semibold'>{product.rating}</p>
-                    <Rating defaultValue={product.rating} precision={0.1} />
+                    <Rating readOnly defaultValue={product.rating} precision={0.1} />
                 </div>
                 <div className=' flex gap-2 items-end'>
                     <span className=' text-xl font-medium'>${discountedPrice}</span>

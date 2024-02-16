@@ -5,14 +5,20 @@ import ProductCard from "../../components/ProductCard";
 import ServiceCard from "../../components/ServiceCard";
 import { useContext } from "react";
 import { homeContext } from "../../context/HomeContext";
-
+import { allproducts } from "../../data/data";
 import iconShipping from '../../assets/icon-shipping.svg';
 import iconPayment from '../../assets/icon-payment.svg';
 import iconReturn from '../../assets/icon-return.svg';
+import { Link } from "react-router-dom";
+import Product from "../../containers/Product";
+import { Rating } from "@mui/material";
 
 export default function Home() {
 
   const { hero, category, adverticement, bestsellers, featuredProducts, services } = useContext(homeContext);
+  const womensCollections = allproducts.filter(item => item.category === 'Womens').slice(0, 8);
+  const menCollectionOne = allproducts.filter(item => item.category === 'mens').slice(0, 1);
+  const menCollections = allproducts.filter(item => item.category === 'mens').slice(1, 9);
 
 
   return (
@@ -52,7 +58,7 @@ export default function Home() {
             <div className=" text-white p-10 h-full flex flex-col gap-5 md:w-2/4">
               <h1 className=" text-3xl font-semibold">{adverticement[0].name}</h1>
               <p className=" font-light">{adverticement[0].description}</p>
-              <button className=" bg-white p-3 w-1/4 text-black rounded-3xl shadow-md hover:bg-black hover:text-white transition-all">Explore</button>
+              <Link to={'/store'}  className=" bg-white p-3 md:w-1/4 text-center text-black rounded-3xl shadow-md hover:bg-black hover:text-white transition-all">Explore</Link>
             </div>
 
             <img src={adverticement[0].bgImage} alt="" width={600} />
@@ -65,16 +71,17 @@ export default function Home() {
 
         <div className=" flex justify-between">
           <h1 className=" text-2xl font-bold">Best Sellers</h1>
-          <p className="flex items-center gap-3">Browse all products <img className=" mt-1" src={Iconarrowdark} alt="" /></p>
+          <Link className="flex items-center gap-3" to={'/store'}>Browse all products <img className=" mt-1" src={Iconarrowdark} alt="" /></Link>
         </div>
 
-        <div className=" grid grid-cols-2 grid-rows-4 gap-5 md:grid-cols-4 md:grid-rows-2">
+        <div className=" grid grid-cols-2 grid-rows-4 gap-5 md:grid-cols-4 md:grid-rows-3 gap-y-10">
 
-          {bestsellers.map((item) => {
-            return (
-              <ProductCard key={item.id} product={item} />
-            );
-          })}
+          {womensCollections.map((product) => (
+            <Link key={product.id} to={`/store/${product.id}`}>
+              <Product key={product.id} product={product} />
+            </Link>
+          ))}
+
 
           <div className=" text-white rounded-3xl col-start-1 col-end-3 p-5 flex flex-col items-center justify-end bg-no-repeat bg-cover" style={{ backgroundImage: `url(${adverticement[1].bgImage})` }}>
 
@@ -82,7 +89,7 @@ export default function Home() {
               <h1 className=" text-3xl font-semibold">{adverticement[1].name}</h1>
               <p className=" font-light">{adverticement[1].description}</p>
 
-              <button className=" bg-white p-3 w-1/4 text-black rounded-3xl shadow-md hover:bg-black hover:text-white transition-all">Explore</button>
+              <Link to={'/store'}  className=" bg-white p-3 md:w-1/4 text-black rounded-3xl shadow-md hover:bg-black hover:text-white transition-all">Explore</Link>
             </div>
 
           </div>
@@ -93,7 +100,7 @@ export default function Home() {
               <h1 className=" text-3xl font-semibold">{adverticement[2].name}</h1>
               <p className=" font-light">{adverticement[2].description}</p>
 
-              <button className=" bg-white p-3 w-1/4 text-black rounded-3xl shadow-md hover:bg-black hover:text-white transition-all">Explore</button>
+              <Link to={'/store'}  className=" bg-white p-3 md:w-1/4 text-black rounded-3xl shadow-md hover:bg-black hover:text-white transition-all">Explore</Link>
             </div>
 
           </div>
@@ -108,28 +115,42 @@ export default function Home() {
 
         <div className=" flex justify-between">
           <h1 className=" text-2xl font-bold">Featured Products</h1>
-          <p className="flex items-center gap-3">Browse all products <img className=" mt-1" src={Iconarrowdark} alt="" /></p>
+          <Link className="flex items-center gap-3" to={'/store'}>Browse all products <img className=" mt-1" src={Iconarrowdark} alt="" /></Link>
         </div>
 
-        <div className=" grid grid-cols-2 grid-rows-3 gap-5 pt-5 md:grid-cols-4 md:grid-rows-2">
+        <div className=" grid grid-cols-2 grid-rows-3 gap-5 pt-5 md:grid-cols-4 md:grid-rows-2 gap-y-10">
 
-          <div className=' flex flex-col col-start-1 col-end-3 gap-3 md:col-start-1 md:col-end-3 md:row-start-1 md:row-end-3 '>
 
-            <div className=' min-w-32 min-h-52 bg-gray-100 rounded-3xl p-3 h-full bg-no-repeat bg-cover' style={{ backgroundImage: `url('https://img.freepik.com/premium-photo/his-confidence-is-first-thing-everyone-notices-studio-shot-handsome-young-man-posing-against-dark-background_590464-45488.jpg')` }}>
-              <div className=' bg-white w-10 h-6 rounded-3xl'>15%</div>
+          <Link className=' flex flex-col col-start-1 col-end-3 gap-3 md:col-start-1 md:col-end-3 md:row-start-1 md:row-end-3 ' to={`/store/${menCollectionOne[0].id}`} >
+
+            <div className=' min-w-32 min-h-52 bg-gray-100 rounded-3xl p-3 h-full bg-no-repeat bg-cover' style={{ backgroundImage: `url(${menCollectionOne[0].image})` }}>
+              <div className=' bg-white flex items-center justify-center font-semibold px-2 w-fit h-6 rounded-3xl'>{menCollectionOne[0].discount}% off</div>
             </div>
 
-            <h1 className=' font-semibold'>Black Elegance Coat</h1>
-            <p className=' font-light'>Experience sophistication with our Black Elegance Coat. Crafted with precision, this coat combines style and comfort effortlessly.</p>
-            <span className=' text-xs font-bold'>$89.99 USD</span>
+            <h1 className=' font-semibold'>{menCollectionOne[0].name}</h1>
+            <p className=' font-light'>{menCollectionOne[0].description}</p>
+            <div className=' flex justify-between items-center md:flex-row-reverse  flex-wrap'>
+              <div className=' flex items-center gap-1'>
+                <p className=' font-semibold'>{menCollectionOne[0].rating}</p>
+                <Rating defaultValue={menCollectionOne[0].rating} precision={0.1} />
+              </div>
+              <div className=' flex gap-2 items-end'>
+                <span className=' text-xl font-medium'>$99</span>
+                <span className=' text-xs font-semibold line-through text-gray-400'>$ {menCollectionOne[0].original_price}</span>
+              </div>
+            </div>
 
 
-          </div>
+          </Link>
 
-
-          {featuredProducts.map((item) => (
-            <ProductCard key={item.id} product={item} />
+          {menCollections.map((product) => (
+            <Link key={product.id} to={`/store/${product.id}`}>
+              <Product key={product.id} product={product} />
+            </Link>
           ))}
+
+
+
 
         </div>
 
@@ -145,8 +166,8 @@ export default function Home() {
         </div>
 
         <div className=" bg-gray-100 min-h-24 rounded-3xl text-center p-10 flex flex-col justify-center items-center gap-5">
-          <h1 className=" text-2xl font-semibold">Subscribe to our email newsletters and get 10%</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, ullam </p>
+          <h1 className=" text-2xl font-semibold">Subscribe to our email newsletters</h1>
+          <p>get 10% discount  on your first purchase! </p>
 
           <div className=" flex gap-2 flex-wrap justify-center">
             <input placeholder="Email Address" type="text" className=" p-2 rounded-3xl stroke-none border-none px-5" />
@@ -165,7 +186,7 @@ export default function Home() {
           <div className=" text-white row-start-2 md:row-start-1">
 
             <h1 className=" text-2xl">Name</h1>
-            <p className=" font-extralight">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, debitis vero aliquam quaerat molestiae</p>
+            <p className=" font-extralight">Explore the newest fashion trends for all occasions, unveiling the latest styles in just a glance.</p>
           </div>
 
           <div className=" text-white row-start-2 md:row-start-1 md:col-start-4">
@@ -192,8 +213,8 @@ export default function Home() {
             <ul>
               <li>Home</li>
               <li>store</li>
-              <li>About</li>
-              <li>Contact</li>
+              <li>Mens</li>
+              <li>Womens</li>
             </ul>
           </div>
 

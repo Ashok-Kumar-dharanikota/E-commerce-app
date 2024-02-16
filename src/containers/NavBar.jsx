@@ -23,11 +23,11 @@ const NavBar = () => {
             <Link to={"/"} className=' text-black uppercase font-bold text-xl'>Logo</Link>
             <div className='flex items-center gap-8'>
 
-                <ul className={` ${open ? "" : "hidden"} text-gray-400 bg-white shadow-md font-medium absolute right-0 w-2/4 flex flex-col justify-start h-screen pl-10 pt-10 bottom-0 gap-10 md:relative md:flex-row md:h-fit md:w-fit md:items-center md:justify-center md:flex md:right-auto md:p-0 md:shadow-none`}>
+                <ul className={` ${open ? "" : "hidden"} text-gray-400 bg-white shadow-md font-medium absolute right-0 w-2/4 flex flex-col justify-start h-screen pl-10 pt-10 bottom-0 gap-10 md:relative md:flex-row md:h-fit md:w-fit md:items-center md:justify-center md:flex md:right-auto md:p-0 md:shadow-none z-30`}>
                     <li><Link to={"/store"}>Store</Link></li>
-                    <li><Link to={"/about"}>About</Link></li>
-                    <li><Link to={"/support"}>Support</Link></li>
-                    <li><Link to={"/contact"}>Contact</Link></li>
+                    <li><Link to={"/mens"}>Mens</Link></li>
+                    <li><Link to={"/womens"}>Womens</Link></li>
+                    <li><Link to={"/kids"}>Kids</Link></li>
                 </ul>
 
                 <div className=' flex justify-center items-center mr-5 md:gap-5'>
@@ -45,7 +45,7 @@ const NavBar = () => {
                     </Link>
 
                 </div>
-                <img className=' absolute right-0 mr-3 md:hidden' src={open ? closeIcon : menuIcon} onClick={handleMenuClick} width={16} height={16} alt="" />
+                <img className=' absolute right-0 mr-3 md:hidden z-30' src={open ? closeIcon : menuIcon} onClick={handleMenuClick} width={16} height={16} alt="" />
             </div>
 
         </nav>
