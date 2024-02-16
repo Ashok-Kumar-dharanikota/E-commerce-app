@@ -1,7 +1,6 @@
 import CategoryCard from "../../components/CategoryCard";
 import HeroCard from "../../components/HeroCard";
 import Iconarrowdark from '../../assets/icon-arrow-dark.svg'
-import ProductCard from "../../components/ProductCard";
 import ServiceCard from "../../components/ServiceCard";
 import { useContext } from "react";
 import { homeContext } from "../../context/HomeContext";
@@ -15,7 +14,7 @@ import { Rating } from "@mui/material";
 
 export default function Home() {
 
-  const { hero, category, adverticement, bestsellers, featuredProducts, services } = useContext(homeContext);
+  const { hero, category, adverticement, services } = useContext(homeContext);
   const womensCollections = allproducts.filter(item => item.category === 'Womens').slice(0, 8);
   const menCollectionOne = allproducts.filter(item => item.category === 'mens').slice(0, 1);
   const menCollections = allproducts.filter(item => item.category === 'mens').slice(1, 9);

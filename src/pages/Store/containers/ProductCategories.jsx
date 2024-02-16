@@ -16,7 +16,6 @@ const Products = () => {
     const [filter, setFilter] = useState(false);
 
     const handleChanges = (e) => {
-        console.log("The value of e is: ", e.target.value);
         const value = e.target.value;
         const isChecked = e.target.checked;
 
@@ -26,7 +25,6 @@ const Products = () => {
         else {
             setCategoryList(category.filter((item) => item !== value));
         }
-        console.log(category);
     }
 
     useEffect(() => {

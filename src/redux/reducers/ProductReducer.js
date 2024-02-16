@@ -8,7 +8,6 @@ export const productReducer = (state = initialState, { type, payload }) => {
     switch (type) {
         case actionTypes.SET_PRODUCTS: {
             const existingProductIndex = state.cart.findIndex(product => product.id === payload.id);
-            console.log(existingProductIndex);
             if (existingProductIndex !== -1) {
                 const updatedCart = [...state.cart];
                 updatedCart[existingProductIndex].quantity = updatedCart[existingProductIndex].quantity + 1;

@@ -5,13 +5,11 @@ import menuIcon from '../assets/icon-menu.svg'
 import closeIcon from '../assets/icon-close.svg'
 import cartIcon from '../assets/icon-cart.svg'
 import { useSelector } from 'react-redux'
-import { allproducts } from '../data/data'
 
 const NavBar = () => {
 
     const [open, isOpen] = useState(false);
     const productList = useSelector((state) => state.allproducts.cart);
-    console.log(productList);
 
     const handleMenuClick = () => {
         isOpen(!open)
