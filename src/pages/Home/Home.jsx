@@ -198,7 +198,7 @@ export default function Home() {
 
             <div>
               <p>Phone</p>
-              <span className=" font-extralight">(+44) 7522 - 507979</span>
+              <span className=" font-extralight">(+91) 7780 - 606516</span>
             </div>
 
 
